@@ -39,7 +39,7 @@ class OnBoardingScreen extends StatelessWidget {
               height: PaddingManger.kPadding.h*2,
             ),
             MyButton(onTap: (){
-              context.pushNamedAndRemoveUntil(Routes.loginScreen,predicate: (x)=>false);
+              context.pushNamed(Routes.loginScreen);
             }, title: 'Get Started')
 
           ],
