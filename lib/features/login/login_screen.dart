@@ -27,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: SingleChildScrollView(
           padding: const EdgeInsetsDirectional.symmetric(
             horizontal: PaddingManger.kPadding,
-            vertical: PaddingManger.kPadding,
+            vertical: PaddingManger.kPadding*3,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -118,16 +118,71 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: PaddingManger.kPadding*1.5,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-
+                  Expanded(
+                    child: Container(
+                      padding:const EdgeInsetsDirectional.all(PaddingManger.kPadding/3),
+                      decoration:const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color:Color(0xffF5F5F5),
+                    
+                      ),
+                      child: Image.asset('assets/images/icons/google_icon.png',height: 30.h,),
                     ),
-                    child: Image,
+                  ),
+                  Expanded(
+                    child: Container(
+                      padding:const EdgeInsetsDirectional.all(PaddingManger.kPadding/3),
+                      decoration:const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color:Color(0xffF5F5F5),
+                    
+                      ),
+                      child: Image.asset('assets/images/icons/facebook_icon.png',height: 30.h,),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      padding:const EdgeInsetsDirectional.all(PaddingManger.kPadding/3),
+                      decoration:const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color:Color(0xffF5F5F5),
+                    
+                      ),
+                      child: Image.asset('assets/images/icons/apple_icon.png',height: 30.h,),
+                    ),
                   )
 
                 ],
+              ),
+              const SizedBox(
+                height: PaddingManger.kPadding*2,
+              ),
+             RichText(
+               textAlign: TextAlign.center,
+                 text: TextSpan(
+               children: [
+                 TextSpan(
+                   text: 'By logging, you agree to our',
+                   style: getMyRegularTextStyle(textColor: ColorManger.lightGrey,fontSize: 14.sp)
+                 ),
+                 TextSpan(
+                     text: ' Terms & Conditions',
+                     style: getMyRegularTextStyle(textColor: Colors.black,fontSize: 14.sp)
+                 ),
+                 TextSpan(
+                     text: ' and',
+                     style: getMyRegularTextStyle(textColor: ColorManger.lightGrey,fontSize: 14.sp)
+                 ),
+                 TextSpan(
+                     text: ' PrivacyPolicy.',
+                     style: getMyRegularTextStyle(textColor: Colors.black,fontSize: 14.sp)
+                 ),
+               ]
+             )),
+              const SizedBox(
+                height: PaddingManger.kPadding,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

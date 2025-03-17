@@ -16,7 +16,7 @@ class DocImageAndName extends StatelessWidget {
         spacing: PaddingManger.kPadding/2.w,
         children: [
 
-          SvgPicture.asset('assets/svgs/doc_logo.svg',height: 70.h,),
+          SvgPicture.asset('assets/svgs/doc_logo.svg',height: 50.h,),
           Text(
             'DocDoc',
             style: getMyBoldTextStyle(textColor:Colors.black,fontSize: 25.sp),
