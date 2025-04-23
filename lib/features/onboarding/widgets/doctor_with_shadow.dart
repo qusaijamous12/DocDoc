@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../core/theming/app_color.dart';
 import '../../../core/theming/text_style.dart';
 
@@ -10,7 +9,6 @@ class DoctorWithShadow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-
       children: [
         Image.asset('assets/images/on_board_logo.png'),
         Container(
@@ -39,14 +37,6 @@ class DoctorWithShadow extends StatelessWidget {
               style:getMyBoldTextStyle(textColor: ColorManger.primaryColor,fontSize: 30.sp) ,
           ),
         )
-
-
-
-
-
-
-
-
       ],
     );
   }

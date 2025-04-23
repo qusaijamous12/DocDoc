@@ -11,8 +11,9 @@ class MyTextField extends StatelessWidget {
   final TextInputType textInputType;
   final bool ?obsecureText;
   final Widget ?suffixIcon;
+  final String? Function(String?)? validate;
 
-  const MyTextField({super.key,required this.hintText,required this.textInputType,required this.controller,this.obsecureText,this.suffixIcon});
+  const MyTextField({super.key,required this.hintText,required this.textInputType,required this.controller,this.obsecureText,this.suffixIcon,this.validate});
 
   @override
   Widget build(BuildContext context) {
@@ -37,11 +38,27 @@ class MyTextField extends StatelessWidget {
             borderRadius: BorderRadius.circular(PaddingManger.kPadding/2),
 
           ),
+          errorBorder: OutlineInputBorder(
+            borderSide:const BorderSide(
+              color: Colors.red,
+            ),
+            borderRadius: BorderRadius.circular(PaddingManger.kPadding/2),
+
+          ),
+          focusedErrorBorder:OutlineInputBorder(
+            borderSide:const BorderSide(
+              color: Colors.red,
+            ),
+            borderRadius: BorderRadius.circular(PaddingManger.kPadding/2),
+
+          ) ,
+
           suffixIcon:suffixIcon??const SizedBox() ,
           hintText: hintText,
           hintStyle: getMyRegularTextStyle(textColor: ColorManger.greyColor)
 
       ),
+      validator:validate,
       style: getMyMediumTextStyle(textColor: Colors.black),
     );
   }
